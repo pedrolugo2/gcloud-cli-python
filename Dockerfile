@@ -1,9 +1,9 @@
-FROM jfloff/alpine-python:3.4-slim
+FROM jfloff/alpine-python:3.4
 
 ENV PATH="/gcloud/google-cloud-sdk/bin:${PATH}"
 
 # Install CA certs, openssl to https downloads, python for gcloud sdk
-RUN apk add --update make ca-certificates openssl python wget \
+RUN apk add --update make ca-certificates openssl wget \
     && update-ca-certificates \
 # Download and install Google Cloud SDK.
     && mkdir /gcloud \
