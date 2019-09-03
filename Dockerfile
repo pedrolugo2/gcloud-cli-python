@@ -1,4 +1,4 @@
-FROM jfloff/alpine-python:3.4
+FROM jfloff/alpine-python
 
 ENV PATH="/gcloud/google-cloud-sdk/bin:${PATH}"
 
